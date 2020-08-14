@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <span class="navbar-brand">
+    <%= t ".name" %>
+  </span>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to login_path, {class: "nav-link"} do %>
+          <%= t ".login" %>
+        <% end %>
+      </li>
+    </ul>
+    <div class="my-2 my-md-0">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <% if locale == :vi %>
+          <button type="button" class="btn btn-secondary">
+            <%= link_to t(".japanese"), {locale: "ja"}, {class: "my-a-to-none"} %>
+          </button>
+          <button type="button" class="btn btn-secondary my-active">
+            <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "my-a-to-none"} %>
+          </button>
+        <% else %>
+          <button type="button" class="btn btn-secondary my-active">
+              <%= link_to t(".japanese"), {locale: "ja"}, {class: "my-a-to-none"} %>
+            </button>
+          <button type="button" class="btn btn-secondary">
+            <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "my-a-to-none"} %>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

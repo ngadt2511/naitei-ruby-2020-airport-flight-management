@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /ja|vi/ do
+    root "static_pages#home"
+    get "users/new"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    resources :users, only: :show
+  end
 end

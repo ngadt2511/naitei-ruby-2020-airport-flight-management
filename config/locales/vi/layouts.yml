@@ -1,0 +1,17 @@
+vi:
+  layouts:
+    sidebar:
+      name: ADMIN
+      online: Hoạt động
+      offline: Ẩn
+      busy: Bận
+      actions: Công việc
+      management_plane: QL Đường bay
+      profile: Thông tin cá nhân
+      settings: Cài đặt
+    header:
+      name: FLIGHT MANAGEMENT
+      login: Đăng nhập
+      search: Tìm kiếm
+      japanese: Tiếng Nhật
+      vietnamese: Tiếng Việt

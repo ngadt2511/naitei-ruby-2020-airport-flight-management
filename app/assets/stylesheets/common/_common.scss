@@ -1,0 +1,15 @@
+@import "./variables";
+
+.my-a-to-none {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.my-active {
+  background-color: $fern;
+}

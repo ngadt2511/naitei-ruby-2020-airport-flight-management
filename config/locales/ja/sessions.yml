@@ -1,0 +1,10 @@
+ja:
+  sessions:
+    new:
+      fogot_password: パスワードを忘れ？
+      log_in: 登録
+      remember_me_content: 私を記憶する
+      username: ユーザ名
+      password: パスワード
+    create:
+      invalid: 無効なメール/パスワードです。

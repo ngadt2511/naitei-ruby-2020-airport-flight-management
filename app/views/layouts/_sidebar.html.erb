@@ -1,0 +1,89 @@
+<span id="show-sidebar" class="btn btn-sm btn-dark">
+  <i class="fas fa-bars"></i>
+</span>
+<nav id="sidebar" class="sidebar-wrapper">
+  <div class="sidebar-content">
+    <div class="sidebar-brand">
+      <%= link_to root_path locale do %>
+        <i class="fa fa-plane"></i>
+        <%= t ".name" %>
+      <% end %>
+      <div id="close-sidebar">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <div class="sidebar-header">
+      <div class="user-pic">
+        <%= image_tag(Settings.link.layouts.sidebar.avatar, alt: Settings.link.layouts.sidebar.alt_avatar) %>
+      </div>
+      <div class="user-info">
+        <span class="user-name">
+          <%= t ".first_name" %>
+          <strong>
+            <%= t ".last_name" %>
+          </strong>
+        </span>
+        <span class="user-role">
+          <%= t ".role" %>
+        </span>
+        <span class="user-status">
+          <i class="fa fa-circle"></i>
+          <span>
+            <%= t ".online" %>
+          </span>
+        </span>
+      </div>
+    </div>
+    <!-- sidebar-header  -->
+    <div class="sidebar-menu">
+      <ul>
+        <li class="header-menu">
+          <span>
+            <%= t ".actions" %>
+          </span>
+        </li>
+        <li>
+          <%= link_to root_path locale do %>
+            <i class="fa fa-plane"></i>
+            <span>
+              <%= t ".management_plane" %>
+            </span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <!-- sidebar-menu  -->
+  </div>
+  <!-- sidebar-content  -->
+  <div class="sidebar-footer">
+    <%= link_to root_path locale do %>
+      <i class="fa fa-bell"></i>
+    <% end %>
+    <%= link_to root_path locale do %>
+      <i class="fa fa-envelope"></i>
+    <% end %>
+    <% if logged_in? %>
+      <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= link_to root_path locale do %>
+          <i class="fa fa-cog"></i>
+          <span class="badge-sonar"></span>
+          <% end %>
+        </button>
+        <div class="dropdown-menu">
+          <li><%= link_to t(".profile"), current_user %></li>
+          <li><%= link_to t(".settings"), "#" %></li>
+        </div>
+      </div>
+    <% else %>
+      <%= link_to root_path locale do %>
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      <% end %>
+    <% end %>
+    <%= link_to root_path locale do %>
+      <i class="fa fa-power-off"></i>
+    <% end %>
+  </div>
+</nav>
