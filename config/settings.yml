@@ -1,0 +1,7 @@
+link:
+  app:
+    fontawesome: https://use.fontawesome.com/releases/v5.0.6/css/all.css
+  layouts:
+    sidebar:
+      avatar: https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg
+      alt_avatar: Avatar Admin
