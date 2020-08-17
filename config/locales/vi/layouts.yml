@@ -7,6 +7,8 @@ vi:
       busy: Bận
       actions: Công việc
       management_plane: QL Đường bay
+      profile: Thông tin cá nhân
+      settings: Cài đặt
     header:
       name: FLIGHT MANAGEMENT
       login: Đăng nhập

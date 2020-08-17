@@ -5,3 +5,10 @@ link:
     sidebar:
       avatar: https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg
       alt_avatar: Avatar Admin
+user:
+  name_length: 50
+  email_length: 255
+  password_min_length: 6
+  email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+sessions:
+  checkbox: 1

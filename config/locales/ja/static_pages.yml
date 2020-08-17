@@ -1,3 +1,4 @@
-static_pages:
-  home:
-    welcome: こんにちは !!
+ja:
+  static_pages:
+    home:
+      welcome: こんにちは !!

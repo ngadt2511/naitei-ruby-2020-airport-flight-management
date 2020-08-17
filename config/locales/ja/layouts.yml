@@ -1,0 +1,17 @@
+ja:
+  layouts:
+    sidebar:
+      name: アドミン
+      online: 活動
+      offline: 隠す
+      busy: 忙しい
+      actions: 仕事
+      management_plane: 飛行経路の管理
+      profile: プロフィール
+      settings: 設定
+    header:
+      name: フライト管理
+      login: 登録
+      search: 検索
+      japanese: 日本語
+      vietnamese: ベトナム語
