@@ -34,3 +34,4 @@ config/environments/*.local.yml
 !/spec/spec_helper.rb
 .rspec
 rspec.text
+/spec/*

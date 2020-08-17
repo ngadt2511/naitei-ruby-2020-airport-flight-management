@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :notifications, dependent: :destroy
+  has_many :schedules, dependent: :nullify
+
   VALID_EMAIL_REGEX = Settings.user.email_regex
   attr_accessor :remember_token
 
