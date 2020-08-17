@@ -67,8 +67,8 @@
         <button type="button" class="btn btn-secondary dropdown-toggle"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= link_to root_path locale do %>
-          <i class="fa fa-cog"></i>
-          <span class="badge-sonar"></span>
+            <i class="fa fa-cog"></i>
+            <span class="badge-sonar"></span>
           <% end %>
         </button>
         <div class="dropdown-menu">
@@ -76,14 +76,14 @@
           <li><%= link_to t(".settings"), "#" %></li>
         </div>
       </div>
+        <%= link_to logout_path(locale), method: :delete do %>
+          <i class="fa fa-power-off"></i>
+        <% end %>
     <% else %>
       <%= link_to root_path locale do %>
         <i class="fa fa-cog"></i>
         <span class="badge-sonar"></span>
       <% end %>
-    <% end %>
-    <%= link_to root_path locale do %>
-      <i class="fa fa-power-off"></i>
     <% end %>
   </div>
 </nav>
