@@ -10,5 +10,6 @@ user:
   email_length: 255
   password_min_length: 6
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  expired: 2
 sessions:
   checkbox: 1

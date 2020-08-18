@@ -74,6 +74,7 @@
         <div class="dropdown-menu">
           <li><%= link_to t(".profile"), current_user %></li>
           <li><%= link_to t(".settings"), "#" %></li>
+          <li><%= link_to t(".change_password"), edit_password_change_path(current_user) %></li>>
         </div>
       </div>
         <%= link_to logout_path(locale), method: :delete do %>

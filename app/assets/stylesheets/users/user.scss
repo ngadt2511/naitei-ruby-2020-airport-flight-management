@@ -9,12 +9,12 @@ html,body {
   font-family: 'Numans', sans-serif;
 }
 
-#login-screen.container {
+#login-screen.container, #change-password-screen {
   height: 100%;
   align-content: center;
 
   .card {
-    height: 370px;
+    height: auto;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
@@ -70,7 +70,7 @@ html,body {
   .my-login-btn {
     color: $black;
     background-color: $golden-poppy;
-    width: 100px;
+    width: auto;
 
     &:hover {
       color: $black;

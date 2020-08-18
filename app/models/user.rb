@@ -3,7 +3,8 @@ class User < ApplicationRecord
   has_many :schedules, dependent: :nullify
 
   VALID_EMAIL_REGEX = Settings.user.email_regex
-  attr_accessor :remember_token
+  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  attr_accessor :remember_token, :change_token
 
   validates :name, presence: true,
     length: {maximum: Settings.user.name_length}
@@ -43,6 +44,15 @@ class User < ApplicationRecord
     return false if remember_digest.nil?
 
     BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def create_change_digest
+    self.change_token = User.new_token
+    update change_digest: User.digest(reset_token), change_sent_at: Time.zone.now
+  end
+
+  def password_change_expired?
+    change_sent_at < Settings.user.expired.hours.ago
   end
 
   private

@@ -9,9 +9,13 @@ ja:
       management_plane: 飛行経路の管理
       profile: プロフィール
       settings: 設定
+      change_password: パスワードを変更
     header:
       name: フライト管理
       login: 登録
       search: 検索
       japanese: 日本語
       vietnamese: ベトナム語
+    error_messages:
+      error: エラーがあります。
+      the_form_contains: このフォームは
