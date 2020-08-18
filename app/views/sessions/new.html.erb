@@ -27,14 +27,12 @@
             <% end %>
           </div>
           <div class="form-group">
-            <%= f.submit t(".log_in"), class: "btn float-right my-login-btn" %>
+            <%= f.button t(".log_in"), {class: "btn float-right btn-warning my-hover", id: "btn-login"} do %>
+              <i class="fas fa-sign-in-alt"></i>
+              <%= t ".log_in" %>
+            <% end %>
           </div>
         <% end %>
-      </div>
-      <div class="card-footer">
-        <div class="d-flex justify-content-center">
-          <%= link_to  t(".fogot_password"),"#" %>
-        </div>
       </div>
     </div>
   </div>
