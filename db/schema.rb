@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_060235) do
+ActiveRecord::Schema.define(version: 2020_08_18_080008) do
 
   create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_060235) do
   end
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.date "time"
+    t.datetime "time"
     t.string "status"
     t.string "title"
     t.string "from"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_060235) do
     t.string "name"
     t.string "email"
     t.string "staff_code"
-    t.string "type"
+    t.string "type_account"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
