@@ -1,0 +1,14 @@
+ja:
+  schedules:
+    index:
+      plane_name: 飛行機の名前
+      from: から
+      to: まで
+      time: 飛行時間
+      run_way: 滑走路
+  views:
+    pagination:
+      first: "« 最初"
+      last: "最後 »"
+      previous: "‹ 前"
+      next: "後 ›"

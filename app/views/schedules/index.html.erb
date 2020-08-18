@@ -1,0 +1,27 @@
+<div class="table-responsive">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= t ".plane_name" %></th>
+        <th><%= t ".from" %></th>
+        <th><%= t ".to" %></th>
+        <th><%= t ".time" %></th>
+        <th><%= t ".run_way" %></th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @schedules.each_with_index do |schedule, index| %>
+        <tr>
+          <th scope="row"><%= index+1 %></th>
+          <td><%= schedule.plane.name %></td>
+          <td><%= schedule.from %></td>
+          <td><%= schedule.to %></td>
+          <td><%= schedule.time %></td>
+          <td><%= schedule.runway.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @schedules, theme: "twitter-bootstrap-4" %>
+</div>

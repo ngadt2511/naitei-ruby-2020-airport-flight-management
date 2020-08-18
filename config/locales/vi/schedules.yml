@@ -1,0 +1,14 @@
+vi:
+  schedules:
+    index:
+      plane_name: Tên máy bay
+      from: Từ
+      to: Đến
+      time: Thời gian bay
+      run_way: Đường băng
+  views:
+    pagination:
+      first: "« Đầu"
+      last: "Cuối »"
+      previous: "‹ Trước"
+      next: "Sau ›"
