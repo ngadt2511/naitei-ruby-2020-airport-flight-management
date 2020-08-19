@@ -1,4 +1,8 @@
 jQuery(function ($) {
+  if (window.location.pathname === '/vi/login' ||  window.location.pathname === '/login'
+    || window.location.pathname === '/ja/login') {
+    $('.page-wrapper').addClass('header-befor-login')
+  }
 
   $('.sidebar-dropdown > a').click(function() {
     $('.sidebar-submenu').slideUp(200)

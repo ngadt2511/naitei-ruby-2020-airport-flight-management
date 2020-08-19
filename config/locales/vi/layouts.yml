@@ -9,6 +9,7 @@ vi:
       management_plane: QL Đường bay
       profile: Thông tin cá nhân
       settings: Cài đặt
+      schedules: Lịch bay
     header:
       name: FLIGHT MANAGEMENT
       login: Đăng nhập

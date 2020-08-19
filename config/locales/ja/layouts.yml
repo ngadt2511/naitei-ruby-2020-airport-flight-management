@@ -9,6 +9,7 @@ ja:
       management_plane: 飛行経路の管理
       profile: プロフィール
       settings: 設定
+      schedules: スケジュール
     header:
       name: フライト管理
       login: 登録
