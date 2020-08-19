@@ -11,4 +11,4 @@ user:
   password_min_length: 6
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
 sessions:
-  checkbox: 1
+  checkbox: "1"

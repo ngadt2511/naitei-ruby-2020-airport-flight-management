@@ -1,0 +1,65 @@
+@import "../common/variables";
+
+#view-profile-screen {
+  font-size: 1.2em;
+  border-radius: 10px;
+
+  .view-profile-title {
+    text-align: center;
+
+    h1 {
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+  & > .row {
+    max-width: 876px;
+    min-width: 768px;
+  }
+  .main-secction {
+    box-shadow: 10px 10px 10px;
+  }
+  .user-image {
+    position: absolute;
+    margin-top: 10px;
+
+    img {
+      width:120px;
+      height:120px;
+    }
+  }
+  .user-left-part {
+    margin: 0px;
+    width: 100%;
+  }
+  .user-profil-part {
+    padding-bottom:30px;
+    background-color:$black-opacity;
+  }
+  .follow {
+    margin-top: 65%;
+  }
+  .profile-right-section {
+    padding: 20px 0px 10px 15px;
+    background-color: $black-opacity;
+    color: $white;
+  }
+  .profile-right-section-row {
+    margin: 0px;
+  }
+  .profile-header-section1 {
+    h1 {
+      font-size: 25px;
+      margin: 0px;
+    }
+    h5 {
+      color: $fern;
+    }
+  }
+  .nav-link {
+    font-size: 1.2em;
+  }
+  .tab-content {
+    padding-top: 15px;
+  }
+}
