@@ -44,6 +44,18 @@ a {
   }
 }
 
+.color-red {
+  color: $red;
+}
+
+.color-green {
+  color: $green;
+}
+
+.color-gray {
+  color: $gray;
+}
+
 .my-hover {
   &.btn:hover {
     background-color: $cloud-burst;

@@ -14,3 +14,6 @@ sessions:
   checkbox: "1"
 pagination:
   page: 10
+notifications:
+  readed: "1"
+  no_read: "0"
