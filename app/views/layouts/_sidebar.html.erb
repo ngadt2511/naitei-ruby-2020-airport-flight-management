@@ -63,8 +63,9 @@
     </div>
     <!-- sidebar-content  -->
     <div class="sidebar-footer">
-      <%= link_to root_path locale do %>
+      <%= link_to notifications_path locale do %>
         <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-success notification"><%= handle_notification.size %></span>
       <% end %>
       <%= link_to root_path locale do %>
         <i class="fa fa-envelope"></i>

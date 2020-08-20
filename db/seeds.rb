@@ -87,3 +87,15 @@ end
                   user_id: user_id
     )
 end
+
+20.times do |n|
+  title = "Vietnam ariline"
+  content = "Delay plane"
+  status = "0"
+  schedule_id = (n*131 + n*11) % 20+1
+  Notification.create!(title: title,
+                  content: content,
+                  status: status,
+                  schedule_id: schedule_id
+    )
+end

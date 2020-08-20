@@ -1,0 +1,25 @@
+@import '../common/variables';
+
+#notification-screen {
+  .card-header {
+    &:hover {
+      cursor: pointer;
+      background-color: $cloud-burst;
+      button.btn-link a {
+        color: white;
+      }
+    }
+    .card-notification {
+      position: relative;
+      .notification-status {
+        position: absolute;
+        right: 0px;
+        top: 30%;
+        p {
+          display: inline-block;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+}

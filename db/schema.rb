@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_080008) do
+ActiveRecord::Schema.define(version: 2020_08_19_075807) do
 
   create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2020_08_18_080008) do
     t.string "title"
     t.string "content"
     t.string "status"
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_notifications_on_user_id"
+    t.bigint "schedule_id", null: false
+    t.index ["schedule_id"], name: "index_notifications_on_schedule_id"
   end
 
   create_table "planes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_080008) do
   end
 
   add_foreign_key "logs", "schedules"
-  add_foreign_key "notifications", "users"
+  add_foreign_key "notifications", "schedules"
   add_foreign_key "schedules", "planes"
   add_foreign_key "schedules", "runways"
   add_foreign_key "schedules", "users"
