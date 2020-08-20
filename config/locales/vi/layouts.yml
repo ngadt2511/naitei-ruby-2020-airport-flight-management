@@ -16,3 +16,5 @@ vi:
       search: Tìm kiếm
       japanese: Tiếng Nhật
       vietnamese: Tiếng Việt
+    application:
+      name: Quản lý đường bay
