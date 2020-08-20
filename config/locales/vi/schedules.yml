@@ -1,6 +1,7 @@
 vi:
   schedules:
     index:
+      title: Lịch bay
       plane_name: Tên máy bay
       from: Từ
       to: Đến

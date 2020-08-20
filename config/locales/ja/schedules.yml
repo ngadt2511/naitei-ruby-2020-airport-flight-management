@@ -1,6 +1,7 @@
 ja:
   schedules:
     index:
+      title: スケジュール
       plane_name: 飛行機の名前
       from: から
       to: まで
