@@ -56,7 +56,13 @@ a {
   color: $gray;
 }
 
+.color-white {
+  color: $white;
+}
+
 .my-hover {
+  cursor: pointer;
+
   &.btn:hover {
     background-color: $cloud-burst;
     color: $white;

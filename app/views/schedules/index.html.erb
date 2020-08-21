@@ -18,7 +18,7 @@
           <td><%= schedule.plane.name %></td>
           <td><%= schedule.from %></td>
           <td><%= schedule.to %></td>
-          <td><%= schedule.time %></td>
+          <td><%= schedule.time.to_time.strftime Settings.schedules.format_date %></td>
           <td><%= schedule.runway.name %></td>
         </tr>
       <% end %>

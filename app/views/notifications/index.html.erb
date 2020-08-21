@@ -12,14 +12,16 @@
             <% if notification.status == Settings.notifications.no_read %>
               <span class="notification-status color-red" id=<%= "btn-link-notification-#{notification.id}" %>>
                 <p>
-                  <%= notification.created_at %>
+                  <%= time_ago_in_words notification.created_at %>
+                  <%= t ".ago" %>
                 </p>
                 <i class="fa fa-bell"></i>
               </span>
             <% else %>
               <span class="notification-status color-gray">
                 <p>
-                  <%= notification.created_at %>
+                  <%= time_ago_in_words notification.created_at %>
+                  <%= t ".ago" %>
                 </p>
                 <i class="fa fa-bell"></i>
               </span>

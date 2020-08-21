@@ -16,5 +16,7 @@ vi:
       search: Tìm kiếm
       japanese: Tiếng Nhật
       vietnamese: Tiếng Việt
+      profile: Hồ sơ
+      logout: Đăng xuất
     application:
       name: Quản lý đường bay

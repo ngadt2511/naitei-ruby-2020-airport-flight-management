@@ -12,6 +12,7 @@ user:
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
 sessions:
   checkbox: "1"
+  pattern: .{0}|.{6,20}
 pagination:
   page: 10
 notifications:
@@ -21,3 +22,5 @@ type_account:
   pilot: "PILOT"
   air_traffic_officer: "AIR_TRAFFIC_OFFICER"
   admin: "ADMIN"
+schedules:
+  format_date: "%Y - %B %e at %l:%M %p"
