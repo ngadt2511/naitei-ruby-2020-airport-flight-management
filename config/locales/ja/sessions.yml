@@ -6,5 +6,6 @@ ja:
       remember_me_content: 私を記憶する
       username: ユーザ名
       password: パスワード
+      title_error_pass: （6から20文字）
     create:
       invalid: 無効なメール/パスワードです。

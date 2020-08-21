@@ -5,23 +5,39 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
     </ul>
-    <div class="my-2 my-md-0">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <% if locale == :vi %>
-          <button type="button" class="btn btn-secondary">
-            <%= link_to t(".japanese"), {locale: "ja"}, {class: "my-a-to-none"} %>
-          </button>
-          <button type="button" class="btn btn-secondary my-active">
-            <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "my-a-to-none"} %>
-          </button>
-        <% else %>
-          <button type="button" class="btn btn-secondary my-active">
-              <%= link_to t(".japanese"), {locale: "ja"}, {class: "my-a-to-none"} %>
-            </button>
-          <button type="button" class="btn btn-secondary">
-            <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "my-a-to-none"} %>
-          </button>
+    <% if logged_in? %>
+      <div class="header-bell my-hover">
+        <%= link_to notifications_path locale do %>
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-pill badge-success notification"><%= handle_notification.size %></span>
         <% end %>
+      </div>
+      <div class="nav-item dropdown">
+        <div class="nav-link dropdown-toggle color-white my-hover" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user"></i>
+          <%= t ".profile" %>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to t(".profile"), user_path(locale, current_user), class: "dropdown-item" %>
+          <%= link_to t(".logout"), logout_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="my-2 my-md-0">
+      <div class="nav-item dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle my-hover" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-globe"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= link_to url_for(locale: "ja"), {class: "dropdown-item"} do %>
+            <%= image_tag "ja.png" %>
+            <span class="ml-2"><%= t ".japanese" %></span>
+          <% end %>
+          <%= link_to url_for(locale: "vi"), {class: "dropdown-item"} do %>
+            <%= image_tag "vi.png" %>
+            <span class="ml-2"><%= t ".vietnamese" %></span>
+          <% end %>
+        <div>
       </div>
     </div>
   </div>

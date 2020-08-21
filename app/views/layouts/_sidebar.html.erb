@@ -64,28 +64,6 @@
       </div>
       <!-- sidebar-menu  -->
     </div>
-    <!-- sidebar-content  -->
-    <div class="sidebar-footer">
-      <%= link_to notifications_path locale do %>
-        <i class="fa fa-bell"></i>
-        <span class="badge badge-pill badge-success notification"><%= handle_notification.size %></span>
-      <% end %>
-      <%= link_to root_path locale do %>
-        <i class="fa fa-envelope"></i>
-      <% end %>
-      <% if logged_in? %>
-        <%= link_to user_path locale, current_user do %>
-          <i class="fa fa-user"></i>
-        <% end %>
-        <%= link_to logout_path(locale), method: :delete do %>
-          <i class="fa fa-power-off"></i>
-        <% end %>
-      <% else %>
-        <%= link_to root_path locale do %>
-          <i class="fa fa-cog"></i>
-        <% end %>
-      <% end %>
-    </div>
   </nav>
 <% else %>
   <span id="show-sidebar-fake" class="btn btn-sm btn-dark my-hover">

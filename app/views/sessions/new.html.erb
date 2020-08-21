@@ -12,14 +12,14 @@
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
             <%= f.email_field :email, class: "form-control",
-              placeholder: t(".username") %>
+              placeholder: t(".username"), required: "required", autofocus: "autofocus" %>
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
               <%= f.password_field :password, class: "form-control",
-                placeholder: t(".password") %>
+                placeholder: t(".password"), required: "required", pattern: Settings.sessions.pattern, title: t(".title_error_pass") %>
           </div>
           <div class="row align-items-center remember">
             <%= f.label t "remember_me", class: "checkbox inline" do %>
