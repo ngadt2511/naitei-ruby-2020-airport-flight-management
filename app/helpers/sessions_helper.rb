@@ -29,4 +29,9 @@ module SessionsHelper
     session.delete :user_id
     @current_user = nil
   end
+
+  def type_account
+    {PILOT: Settings.type_account.pilot, AIR_TRAFFIC_OFFICER: Settings.type_account.air_traffic_officer,
+     ADMIN: Settings.type_account.admin}
+  end
 end
