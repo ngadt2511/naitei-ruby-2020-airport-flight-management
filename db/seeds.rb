@@ -9,7 +9,7 @@ User.create!(name: "test",
   email = "pilot#{n+1}@gmail.com"
   password = "123456"
   staff_code = "N12A-#{n+1}"
-  type_account = "pilot"
+  type_account = "PILOT"
   unit = "A12BHG #{n+1}"
   User.create!(name: name,
                email: email,
@@ -25,7 +25,7 @@ end
   email = "ATO#{n+1}@gmail.com"
   password = "123456"
   staff_code = "ATO20_#{n+1}"
-  type_account = "Air Traffic Officer"
+  type_account = "AIR_TRAFFIC_OFFICER"
   unit = "A12BHG #{n+1}A"
   User.create!(name: name,
                email: email,

@@ -6,7 +6,7 @@
     <div class="sidebar-content">
       <div class="sidebar-brand">
         <%= link_to root_path locale do %>
-          <%= t ".name" %>
+          <%= current_user.type_account %>
         <% end %>
         <div id="close-sidebar" class="my-hover">
           <i class="fas fa-times"></i>
@@ -41,22 +41,25 @@
               <%= t ".actions" %>
             </span>
           </li>
-          <li>
-            <%= link_to root_path locale do %>
-              <i class="fa fa-plane"></i>
-              <span>
-                <%= t ".management_plane" %>
-              </span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to schedules_path locale do %>
-              <i class="fa fa-calendar"></i>
-              <span>
-                <%= t ".schedules" %>
-              </span>
-            <% end %>
-          </li>
+          <% if [type_account[:AIR_TRAFFIC_OFFICER], type_account[:ADMIN]].include? current_user.type_account %>
+            <li>
+              <%= link_to root_path locale do %>
+                <i class="fa fa-plane"></i>
+                <span>
+                  <%= t ".management_plane" %>
+                </span>
+              <% end %>
+            </li>
+          <% elsif [type_account[:PILOT], type_account[:ADMIN]].include? current_user.type_account %>
+            <li>
+              <%= link_to schedules_path locale do %>
+                <i class="fa fa-calendar"></i>
+                <span>
+                  <%= t ".schedules" %>
+                </span>
+              <% end %>
+            </li>
+          <% end %>
         </ul>
       </div>
       <!-- sidebar-menu  -->

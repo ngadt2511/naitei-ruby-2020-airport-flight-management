@@ -17,3 +17,7 @@ pagination:
 notifications:
   readed: "1"
   no_read: "0"
+type_account:
+  pilot: "PILOT"
+  air_traffic_officer: "AIR_TRAFFIC_OFFICER"
+  admin: "ADMIN"
