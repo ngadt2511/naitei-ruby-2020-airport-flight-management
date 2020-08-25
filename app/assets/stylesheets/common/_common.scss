@@ -44,6 +44,18 @@ a {
   }
 }
 
+.field-required {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    content: "*";
+    color:$red;
+  }
+}
+
 .color-red {
   color: $red;
 }

@@ -5,6 +5,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views", "~> 1.0.1"
 gem "config"
+gem "i18n-js"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
 gem "mysql2", ">= 0.4.4"
@@ -13,7 +14,7 @@ gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
-gem "webpacker", "~> 4.0"
+gem "webpacker", "~> 5.0"
 
 group :development do
   gem "listen", "~> 3.2"

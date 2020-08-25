@@ -1,8 +1,9 @@
 class User < ApplicationRecord
-  has_many :schedules, dependent: :nullify
-
   VALID_EMAIL_REGEX = Settings.user.email_regex
+
   attr_accessor :remember_token
+
+  has_many :schedules, dependent: :nullify
 
   validates :name, presence: true,
     length: {maximum: Settings.user.name_length}

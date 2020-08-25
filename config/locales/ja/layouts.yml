@@ -10,13 +10,14 @@ ja:
       profile: プロフィール
       settings: 設定
       schedules: スケジュール
+      create_request: リクエストを作成する
     header:
       name: フライト管理
       login: 登録
       search: 検索
       japanese: 日本語
       vietnamese: ベトナム語
-      profile: Hồ sơ
-      logout: Đăng xuất
+      profile: プロフィール
+      logout: ログアウト
     application:
         name: フライト管理

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_075807) do
+ActiveRecord::Schema.define(version: 2020_08_25_014031) do
 
   create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(version: 2020_08_19_075807) do
     t.string "braned"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "content"
+    t.bigint "schedule_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["schedule_id"], name: "index_requests_on_schedule_id"
   end
 
   create_table "runways", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -77,6 +85,7 @@ ActiveRecord::Schema.define(version: 2020_08_19_075807) do
 
   add_foreign_key "logs", "schedules"
   add_foreign_key "notifications", "schedules"
+  add_foreign_key "requests", "schedules"
   add_foreign_key "schedules", "planes"
   add_foreign_key "schedules", "runways"
   add_foreign_key "schedules", "users"

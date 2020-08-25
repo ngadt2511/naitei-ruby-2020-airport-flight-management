@@ -10,6 +10,7 @@ vi:
       profile: Thông tin cá nhân
       settings: Cài đặt
       schedules: Lịch bay
+      create_request: Tạo yêu cầu
     header:
       name: FLIGHT MANAGEMENT
       login: Đăng nhập
