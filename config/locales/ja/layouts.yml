@@ -11,6 +11,7 @@ ja:
       settings: 設定
       schedules: スケジュール
       create_request: リクエストを作成する
+      view_request: リクエストを見る
     header:
       name: フライト管理
       login: 登録

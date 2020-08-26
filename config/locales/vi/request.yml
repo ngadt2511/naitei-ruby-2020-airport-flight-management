@@ -16,3 +16,12 @@ vi:
       create_request_success: Tạo request thành công.
       create_request_fail: Tạo request thất bại.
     alert: Lấy dữ liệu thất bại
+    index:
+      head: Xem yêu cầu
+      id: ID
+      schedule_name: Tên lịch bay
+      content: Nội dung
+      pilot_name: Tên phi công
+      actions: Hành động
+      approve: Chấp thuận
+      decline: Từ chối
