@@ -9,7 +9,7 @@ User.create!(name: "test",
   email = "pilot#{n+1}@gmail.com"
   password = "123456"
   staff_code = "N12A-#{n+1}"
-  type_account = "PILOT"
+  type_account = 2
   unit = "A12BHG #{n+1}"
   User.create!(name: name,
                email: email,
@@ -25,7 +25,7 @@ end
   email = "ATO#{n+1}@gmail.com"
   password = "123456"
   staff_code = "ATO20_#{n+1}"
-  type_account = "AIR_TRAFFIC_OFFICER"
+  type_account = 1
   unit = "A12BHG #{n+1}A"
   User.create!(name: name,
                email: email,
@@ -64,12 +64,10 @@ end
 def rand_time(from, to=Time.now)
   Time.at(from + rand * (to.to_f - from.to_f))
 end
-def time_rand from = 0.0, to = Time.now
-  Time.at(from + rand * (to.to_f - from.to_f))
-end
 
-20.times do |n|
-  time = rand_time(2.days.ago)
+
+40.times do |n|
+  time = rand_time(2.days.ago).strftime("%Y-%m-%d %H:%M")
   status = "0"
   title = "hi every one!"
   from = "#{n%2 + 1}"

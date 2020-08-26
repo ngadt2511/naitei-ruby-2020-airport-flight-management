@@ -1,0 +1,66 @@
+<div class="row edit">
+  <div class="table-responsive">
+    <div class="table-dark">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1><%= t ".edit" %></h1>
+          <%= form_for @schedule, remote:true do |f| %>
+            <div class="form-row">
+              <div class="form-group col-md-9">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <%= f.label :time, t(".time") %>
+                <%= f.text_field :time, class: "form-control", value: @schedule.time.strftime(Settings.schedules.format_time), placeholder: t(".time") %>
+              </div>
+              <div class="form-group col-md-3">
+                <i class="fa fa-road" aria-hidden="true"></i>
+                <%= f.label :runway_id, t(".runway_id") %>
+                <%= f.text_field :runway_id, class: "form-control", placeholder: t(".runway_id") %>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <%= f.label :from, t(".from") %>
+                <%= f.text_field :from, class: "form-control", placeholder: t(".from") %>
+              </div>
+              <div class="form-group col-md-4">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <%= f.label :to, t(".to") %>
+                <%= f.text_field :to, class: "form-control", placeholder: t(".to") %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= f.label :status, t(".status") %>
+                <%= f.text_field :status, class: "form-control", placeholder: t(".status") %>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+                <%= f.label :plane_id, t(".plane_id") %>
+                <%= f.text_field :plane_id, class: "form-control", placeholder: t(".plane_id") %>
+              </div>
+              <div class="form-group col-md-6">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <%= f.label :user_id, t(".user_id") %>
+                <%= f.text_field :user_id, class: "form-control", placeholder: t(".user_id") %>
+              </div>
+            </div>
+            <div class="form-row">
+              <%= f.label :title, t(".title") %>
+              <%= f.text_field :title, class: "form-control", placeholder: t(".title") %>
+            </div>
+            <div class="form-row btn-submit">
+              <%= f.button t(".submit"), {class: "btn btn-warning my-hover", id: "btn-login"} do %>
+                <i class="fas fa-edit"></i>
+                <%= t ".submit" %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-sm-4">
+          <%= render"runwayable" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

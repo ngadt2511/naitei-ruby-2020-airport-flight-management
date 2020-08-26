@@ -1,0 +1,17 @@
+var runway_ables = <%=raw @runway_able.to_json %>;
+var name = $('#name').text();
+$('#notification_noexist').hide();
+$('#notification_duplicate').hide();
+if (runway_ables[0] == 0)
+{
+  $('#notification_noexist').show();
+  $('#runway_notification').text(' ' + $('#schedule_runway_id').val() + ' ');
+}
+else
+{
+  $('#notification_duplicate').show();
+  $('#runway_notification1').text(' ' + $('#schedule_runway_id').val() + ' ');
+}
+$('#table-detail').text('');
+for(let i = 1; i < runway_ables.length; i++)
+  $('#table-detail').append('<tr><td>' + runway_ables[i].name + '</td><td>' + runway_ables[i].id + '</td></tr>');

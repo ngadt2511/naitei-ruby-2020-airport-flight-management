@@ -19,10 +19,15 @@ notifications:
   readed: "1"
   no_read: "0"
 type_account:
-  pilot: "PILOT"
-  air_traffic_officer: "AIR_TRAFFIC_OFFICER"
-  admin: "ADMIN"
 schedules:
   format_date: "%Y - %B %e at %l:%M %p"
+  format_time: "%Y-%m-%d %H:%M:%S"
 requests:
   text_row: 5
+  pilot: "pilot"
+  air_traffic_officer: "air_traffic_officer"
+  admin: "admin"
+value:
+  boolean: 1
+  boolean_true: 1
+  boolean_false: 0
