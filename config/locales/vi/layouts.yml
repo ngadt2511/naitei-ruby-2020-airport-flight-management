@@ -11,6 +11,7 @@ vi:
       settings: Cài đặt
       schedules: Lịch bay
       create_request: Tạo yêu cầu
+      view_request: Xem yêu cầu
     header:
       name: FLIGHT MANAGEMENT
       login: Đăng nhập

@@ -15,9 +15,18 @@ class RequestsController < ApplicationController
     end
   end
 
+  def index
+    @requests = list_requests.page(params[:page]).per Settings.pagination.page
+  end
+
   private
 
   def request_params
     params.require(:request).permit Request::REQUEST_PARAMS
+  end
+
+  def list_requests
+    Request.where schedule_id: Schedule.user_schedules(current_user.id) unless current_user.pilot?
+    Request.all
   end
 end

@@ -1,0 +1,50 @@
+<div id="request-screen">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-body" id="form-request">
+        <h2 class="card-title-custom text-center w-100">
+          <%= t ".head" %>
+        </h2>
+      </div>
+      <div class="request-table">
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"><%= t ".id" %></th>
+              <th scope="col"><%= t ".schedule_name" %></th>
+              <th scope="col"><%= t ".content" %></th>
+              <% unless current_user.pilot? %>
+                <th scope="col"><%= t ".pilot_name" %></th>
+                <th scope="col"><%= t ".actions" %></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <% @requests.each_with_index do |request, index| %>
+              <tr>
+              <td><%= index + 1 %></td>
+              <td><%= request.schedule_title %></td>
+              <td><%= request.content %></td>
+              <% unless current_user.pilot? %>
+                <td><%= request.schedule.user_name %></td>
+                <td>
+                  <div class="my-btn-actions">
+                    <%= link_to root_path, class: "btn btn-success my-hover", id: "btn-approve", data: {toggle:"tooltip", html:"true"}, title: t(".approve") do %>
+                      <i class="fas fa-check"></i>
+                    <% end %>
+                    <%= link_to root_path, class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".decline") do %>
+                      <i class="fas fa-trash"></i>
+                    <% end %>
+                  </div>
+                </td>
+              <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mb-3"></div>
+    <%= paginate @requests, theme: "twitter-bootstrap-4" %>
+  </div>
+</div>

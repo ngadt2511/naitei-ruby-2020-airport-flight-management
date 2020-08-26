@@ -16,3 +16,12 @@ ja:
       create_request_success: リクエストを作成することが成功しました。
       create_request_fail: リクエストを作成することが失敗しました。
     alert: データを出すことが失敗しました。
+    index:
+      head: リクエストを見る
+      id: ID
+      schedule_name: スケジュールの名前
+      content: 内容
+      pilot_name: パイロットの名前
+      actions: アクション
+      approve: 承認
+      decline: 低下
