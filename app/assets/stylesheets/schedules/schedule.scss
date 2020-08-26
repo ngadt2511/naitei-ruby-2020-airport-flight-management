@@ -1,0 +1,89 @@
+@import '../common/variables';
+
+.edit {
+  .table-dark {
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 3%;
+    opacity: 0.8;
+    border-radius: 20px 0px 20px 0px;
+  }
+
+  h1 {
+    padding-top: 4%;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn-submit {
+    margin-top: 2%;
+  }
+
+  .btn {
+    margin-top: 2%;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  .form-row {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  i {
+    font-size: 25x;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #runway_able {
+    .row {
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    i {
+      font-size: 30px;
+      color: $yellow;
+      margin-top: 10px;
+    }
+
+    h4 {
+      color: $yellow;
+      margin-left: 10px;
+      margin-bottom: 5%;
+    }
+
+    h5 {
+      text-align: center;
+      width:90%;
+      margin-left: -1%;
+      color: $yellow;
+    }
+
+    #notification_duplicate {
+      display: none;
+    }
+
+    #notification_noexist {
+      display: none;
+    }
+  }
+
+  .table {
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 1%;
+    background-color: none;
+    color: $white;
+  }
+
+  .table td {
+    margin-left: 10px;
+  }
+
+  #content-table-detail {
+    overflow-y: scroll;
+    max-height: 400px;
+  }
+}

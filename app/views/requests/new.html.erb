@@ -40,7 +40,7 @@
             <div class="form-group col-md-12">
               <span class="field-required"><%= f.label :reason, t(".reason") %></span>
               <%= f.text_area :content, rows: Settings.requests.text_row, class: "col-md-12" %>
-            <div id="btn-request">  
+            <div id="btn-request">
               <%= f.button t(".log_in"), {class: "btn float-left btn-primary my-hover", id: "btn-create-request"} do %>
                 <%= t ".submit" %>
               <% end %>

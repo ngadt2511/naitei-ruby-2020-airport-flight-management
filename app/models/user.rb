@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = Settings.user.email_regex
 
+  enum type_account: {admin: 0, air_traffic_officer: 1, pilot: 2}
+
   attr_accessor :remember_token
 
   has_many :schedules, dependent: :nullify

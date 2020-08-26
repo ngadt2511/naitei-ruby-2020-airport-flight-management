@@ -41,7 +41,7 @@
               <%= t ".actions" %>
             </span>
           </li>
-          <% if [type_account[:AIR_TRAFFIC_OFFICER], type_account[:ADMIN]].include? current_user.type_account %>
+          <% if current_user.admin? || current_user.air_traffic_officer? %>
             <li>
               <%= link_to root_path locale do %>
                 <i class="fa fa-plane"></i>
@@ -50,7 +50,7 @@
                 </span>
               <% end %>
             </li>
-          <% elsif [type_account[:PILOT], type_account[:ADMIN]].include? current_user.type_account %>
+          <% end %>
             <li>
               <%= link_to schedules_path locale do %>
                 <i class="fa fa-calendar"></i>
@@ -67,7 +67,6 @@
                 </span>
               <% end %>
             </li>
-          <% end %>
         </ul>
       </div>
       <!-- sidebar-menu  -->

@@ -7,6 +7,28 @@ ja:
       to: まで
       time: 飛行時間
       run_way: 滑走路
+      btn_edit: 編集
+    edit:
+      edit: フライトスケジュールを編集
+      time: 飛行時間
+      runway_id: 滑走路
+      from: から
+      to: まで
+      status: 状況
+      plane_id: 飛行機
+      user_id: ユーザID
+      title: タイトル
+      submit: 編集
+    runwayable:
+      check: 小切手　滑走路
+      id_runway: 滑走路のID
+      name: 名前
+      runway: 滑走路番号
+      dulicate: 中古は別の滑走路に変更してください
+      no_exist: 存在しません。別の滑走路に変更してください
+      id: ID
+    find_schedule:
+      noId: IDがない
   views:
     pagination:
       first: "« 最初"

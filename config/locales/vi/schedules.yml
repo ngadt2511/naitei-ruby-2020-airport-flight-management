@@ -7,6 +7,27 @@ vi:
       to: Đến
       time: Thời gian bay
       run_way: Đường băng
+      btn_edit: Sửa
+    edit:
+      edit: Sửa lịch bay
+      time: Thời gian
+      runway_id: Đường băng
+      from: Từ
+      to: Đến
+      status: Trạng thái
+      plane_id: Máy bay
+      user_id: Nhân viên
+      title: Chú thích
+      submit: Chỉnh sửa
+    runwayable:
+      id_runway: Đường băng trống
+      name: Tên
+      runway: Đường băng số
+      dulicate: đã sử dụng vui lòng đổi đường băng khác
+      no_exist: không tồn tại vui lòng đổi đường băng khác
+      id: ID
+    find_schedule:
+      noId: Không tồn tại ID
   views:
     pagination:
       first: "« Đầu"
