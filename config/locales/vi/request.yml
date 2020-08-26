@@ -1,0 +1,18 @@
+vi:
+  requests:
+    new:
+      schedule_name: Tên lịch bay
+      create_request: Tạo yêu cầu
+      schedule_id: ID Lịch bay 
+      reason: Lý do 
+      pilot_name: Tên phi công
+      title: Tiêu đề
+      from: Từ
+      to: Đến
+      plane_name: Tên máy bay
+      runway: Đường băng
+      submit: Gửi
+    create:
+      create_request_success: Tạo request thành công.
+      create_request_fail: Tạo request thất bại.
+    alert: Lấy dữ liệu thất bại

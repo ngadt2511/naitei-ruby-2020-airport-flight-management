@@ -1,0 +1,18 @@
+ja:
+  requests:
+    new:
+      schedule_name: スケジュールの名前
+      create_request: リクエストを作成する
+      schedule_id: スケジュールID
+      reason: 理由
+      pilot_name: パイロットの名前
+      title: タイトル
+      from: から
+      to: まで
+      plane_name: 飛行機の名前
+      runway: 滑走路
+      submit: 申し出る
+    create:
+      create_request_success: リクエストを作成することが成功しました。
+      create_request_fail: リクエストを作成することが失敗しました。
+    alert: データを出すことが失敗しました。

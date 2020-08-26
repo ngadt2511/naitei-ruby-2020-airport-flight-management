@@ -24,3 +24,5 @@ type_account:
   admin: "ADMIN"
 schedules:
   format_date: "%Y - %B %e at %l:%M %p"
+requests:
+  text_row: 5
