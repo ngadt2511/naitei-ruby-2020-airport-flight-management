@@ -15,10 +15,12 @@ ja:
       from: から
       to: まで
       status: 状況
-      plane_id: 飛行機
-      user_id: ユーザID
+      plane_code: 飛行機
+      user_code: ユーザID
       title: タイトル
       submit: 編集
+      doing: 処理
+      done: 達成した
     runwayable:
       check: 小切手　滑走路
       id_runway: 滑走路のID

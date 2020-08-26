@@ -19,7 +19,7 @@
           <td><%= schedule.time.strftime Settings.schedules.format_time %></td>
           <td><%= schedule.from %></td>
           <td><%= schedule.to %></td>
-          <td><%= schedule.time.to_time.strftime Settings.schedules.format_date %></td>
+          <td><%= schedule.plane_name%></td>
           <td><%= schedule.runway_name %></td>
           <td>
             <% if current_user.air_traffic_officer? %>

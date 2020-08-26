@@ -12,9 +12,6 @@ class Schedule < ApplicationRecord
   delegate :name, to: :user, prefix: :user
   delegate :name, to: :plane, prefix: :plane
 
-  delegate :name, to: :plane, prefix: :plane
-  delegate :name, to: :runway, prefix: :runway
-
   scope :user_schedules, ->(ids){select(:id).where("schedules.user_id = ?", ids)}
   scope :time_schedules, ->(time){where(time: time)}
 
