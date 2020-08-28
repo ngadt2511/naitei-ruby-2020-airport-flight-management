@@ -14,7 +14,7 @@ sessions:
   checkbox: "1"
   pattern: .{0}|.{6,20}
 pagination:
-  page: 10
+  page: 7
 notifications:
   readed: "1"
   no_read: "0"

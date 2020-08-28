@@ -13,7 +13,9 @@
               <th scope="col"><%= t ".id" %></th>
               <th scope="col"><%= t ".schedule_name" %></th>
               <th scope="col"><%= t ".content" %></th>
-              <% unless current_user.pilot? %>
+              <% if current_user.pilot? %>
+                <th scope="col"><%= t ".status" %></th>
+              <% else %>
                 <th scope="col"><%= t ".pilot_name" %></th>
                 <th scope="col"><%= t ".actions" %></th>
               <% end %>
@@ -25,7 +27,9 @@
               <td><%= index + 1 %></td>
               <td><%= request.schedule_title %></td>
               <td><%= request.content %></td>
-              <% unless current_user.pilot? %>
+              <% if current_user.pilot? %>
+                <td>approve</td>
+              <% else %>
                 <td><%= request.schedule.user_name %></td>
                 <td>
                   <div class="my-btn-actions">
