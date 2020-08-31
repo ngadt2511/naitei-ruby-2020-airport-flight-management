@@ -1,8 +1,16 @@
 User.create!(name: "test",
   email: "test1@gmail.com",
   password: "12345678",
-  password_confirmation: "12345678")
-
+  password_confirmation: "12345678"
+  )
+# create admin account
+User.create!(name: "Admin",
+  email: "admin@gmail.com",
+  staff_code: "N12A-1211",
+  type_account: 0,
+  unit: "A12BAG12",
+  password: "123456"
+  )
 # create phi cong pilot
 5.times do |n|
   name = "PiLot#{n+1}"
@@ -65,7 +73,6 @@ def rand_time(from, to=Time.now)
   Time.at(from + rand * (to.to_f - from.to_f))
 end
 
-
 40.times do |n|
   time = rand_time(2.days.ago).strftime("%Y-%m-%d %H:%M")
   status = "0"
@@ -85,7 +92,7 @@ end
                   user_id: user_id
     )
 end
-
+# create  notification
 20.times do |n|
   title = "Vietnam ariline"
   content = "Delay plane"

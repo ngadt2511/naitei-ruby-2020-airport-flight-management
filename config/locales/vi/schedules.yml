@@ -15,10 +15,12 @@ vi:
       from: Từ
       to: Đến
       status: Trạng thái
-      plane_id: Máy bay
-      user_id: Nhân viên
+      plane_code: ID Máy bay
+      user_code: ID Nhân viên
       title: Chú thích
       submit: Chỉnh sửa
+      doing: Đang thực hiện
+      done: Đã hoàn thành
     runwayable:
       id_runway: Đường băng trống
       name: Tên

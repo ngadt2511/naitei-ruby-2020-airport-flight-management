@@ -86,4 +86,12 @@
     overflow-y: scroll;
     max-height: 400px;
   }
+
+  select {
+    background-color: $white;
+    height: 45px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+
+  }
 }
