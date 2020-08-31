@@ -17,7 +17,7 @@ class Schedule < ApplicationRecord
 
   class << self
     def checkrunway? params
-      schedules = Schedule.time_schedules params[:time]
+      schedules = Schedule.time_schedules params[:time].to_datetime
       check_runwayid_form? schedules, Runway.all.size, params[:runway_id].to_i
     end
 
@@ -37,7 +37,7 @@ class Schedule < ApplicationRecord
     end
 
     def find_runwayable time
-      schedules = Schedule.time_schedules time
+      schedules = Schedule.time_schedules time.to_datetime
       runway_used = Array.new
       schedules.each do |schedule|
         runway_used[schedule.runway_id] = Settings.value.boolean if runway_used[schedule.runway_id].blank?
