@@ -59,14 +59,16 @@
                 </span>
               <% end %>
             </li>
-            <li>
-              <%= link_to new_request_path locale do %>
-                <i class="fa fa-plus"></i>
-                <span>
-                  <%= t ".create_request" %>
-                </span>
-              <% end %>
-            </li>
+            <% if current_user.pilot? %>
+              <li>
+                <%= link_to new_request_path locale do %>
+                  <i class="fa fa-plus"></i>
+                  <span>
+                    <%= t ".create_request" %>
+                  </span>
+                <% end %>
+              </li>
+            <% end %>
             <li>
               <%= link_to requests_path locale do %>
                 <i class="fa fa-eye"></i>

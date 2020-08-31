@@ -1,0 +1,127 @@
+@import '../common/variables';
+
+#notification-screen {
+  .card-header {
+    &:hover {
+      cursor: pointer;
+      background-color: $cloud-burst;
+      button.btn-link a {
+        color: $white;
+      }
+    }
+    .card-notification {
+      position: relative;
+      .notification-status {
+        position: absolute;
+        right: 0px;
+        top: 30%;
+        p {
+          display: inline-block;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+#my-alert {
+  cursor: pointer;
+
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+  }
+  .my-alert {
+    background-color: $caramel;
+    padding: 20px 20px 20px 40px;
+    min-width: 420px;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    border-radius: 5px;
+    border-left: 10px solid $orange;
+    transform: translateX(110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.65s;
+
+    &.show {
+      animation: show_slide 0.45s ease forwards;
+      opacity: 1;
+      pointer-events: auto;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background: linear-gradient(to right, $azure-radiance, $cyan);
+        z-index: 2;
+        animation: hideMeter 4s linear;
+      }
+    }
+
+    &.hide {
+      animation: hide_slide 0.45s ease forwards;
+    }
+
+    .fas.fa-exclamation-circle {
+      font-size: 30px;
+      position: absolute;
+      left: 5px;
+      top: 17px;
+      color: $dark-goldenrod;
+    }
+  }
+
+  .msg {
+    font-size: 18px;
+    color: $orange;
+    overflow-y: hidden;
+    word-break: break-word;
+    color: var(--primary-text);
+    overflow-x: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display:-webkit-box;
+    max-width: 400px;
+  }
+}
+
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes hide_slide {
+  0% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  100% {  
+    transform: translateX(110%);
+  }
+}
+
+@keyframes hideMeter {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

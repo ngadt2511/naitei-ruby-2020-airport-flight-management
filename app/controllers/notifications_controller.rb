@@ -2,7 +2,11 @@ class NotificationsController < ApplicationController
   include SchedulesHelper
 
   def index
-    @notifications = find_notifications.page(params[:page]).per Settings.pagination.page
+    if current_user.air_traffic_officer?
+      @notifications = find_notification_by_air_traffic.page(params[:page]).per Settings.pagination.page
+    end
+
+    @notifications = find_notifications.page(params[:page]).per Settings.pagination.page if current_user.pilot?
   end
 
   def destroy

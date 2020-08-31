@@ -7,11 +7,10 @@
     </ul>
     <% if logged_in? %>
       <div class="header-bell my-hover">
-        <%= link_to notifications_path locale do %>
-          <i class="fa fa-bell"></i>
-          <span class="badge badge-pill badge-success notification"><%= handle_notification.size %></span>
-        <% end %>
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-success notification"><%= handle_notification.size %></span>
       </div>
+      <%= render "notifications/box_notifications" %>
       <div class="nav-item dropdown">
         <div class="nav-link dropdown-toggle color-white my-hover" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-user"></i>

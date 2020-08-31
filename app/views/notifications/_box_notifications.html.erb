@@ -1,0 +1,41 @@
+<div class="box_notification_container" id="box_notification_container">
+  <div class="noti-header">
+    <h2 class="text">
+      <%= t ".notification" %>
+    </h2>
+    <div id="close-notifications" class="my-hover">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <div class="noti-list">
+    <% find_notifications.each do |notification| %>
+      <%= link_to notifications_path, class: "color-black" do %>
+        <div class="noti-item">
+          <div class="avatar">
+            <img src=<%= Settings.link.layouts.sidebar.avatar %> alt=<%= Settings.link.layouts.sidebar.alt_avatar %>
+              width=<%= Settings.link.layouts.sidebar.size %> height=<%= Settings.link.layouts.sidebar.size %>>
+          </div>
+          <div class="noti-content">
+            <div class="message">
+              <strong class="name-from">
+                <%= t ".name" %>
+              </strong>
+              <span class="message-first">
+                <%= notification.title %>
+              </span>
+              <strong class="name-to">
+                <%= t ".name" %>
+              </strong>
+              <span class="message-second">
+                <%= notification.content %>
+              </span>
+            </div>
+            <div class="time">
+              <span><%= time_ago_in_words notification.created_at %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

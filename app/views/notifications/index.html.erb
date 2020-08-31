@@ -1,5 +1,5 @@
 <div id="notification-screen">
-  <div id="accordion">
+  <div id="accordion" class="mb-3">
     <% @notifications.each do |notification| %>
       <div class="card">
         <div class="card-header my-hover" id=<%= "a#{notification.id*1000}" %>>
@@ -35,7 +35,6 @@
         </div>
       </div>
     <% end %>
-    <div class="mb-3"></div>
-    <%= paginate @notifications, theme: "twitter-bootstrap-4" %>
   </div>
+  <%= paginate @notifications, theme: "twitter-bootstrap-4" %>
 </div>
