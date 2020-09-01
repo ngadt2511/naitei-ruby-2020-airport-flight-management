@@ -13,32 +13,119 @@
               <th scope="col"><%= t ".id" %></th>
               <th scope="col"><%= t ".schedule_name" %></th>
               <th scope="col"><%= t ".content" %></th>
+              <th scope="col"><%= t ".status" %></th>
               <% unless current_user.pilot? %>
                 <th scope="col"><%= t ".pilot_name" %></th>
+                <th scope="col"><%= t ".actions" %></th>
+              <% else %>
                 <th scope="col"><%= t ".actions" %></th>
               <% end %>
             </tr>
           </thead>
           <tbody>
             <% @requests.each_with_index do |request, index| %>
-              <tr>
-              <td><%= index + 1 %></td>
-              <td><%= request.schedule_title %></td>
-              <td><%= request.content %></td>
-              <% unless current_user.pilot? %>
-                <td><%= request.schedule.user_name %></td>
-                <td>
-                  <div class="my-btn-actions">
-                    <%= link_to root_path, class: "btn btn-success my-hover", id: "btn-approve", data: {toggle:"tooltip", html:"true"}, title: t(".approve") do %>
-                      <i class="fas fa-check"></i>
+              <% if current_user.pilot? %>
+                <tr id=<%= "row_request_#{request.id}" %>>
+                  <td><%= index + 1 %></td>
+                  <td><%= request.schedule_title %></td>
+                  <td><%= request.content %></td>
+                  <td class=<%= "status_request_#{request.id}"%>>
+                    <small class="badge badge-<%= modify_label_color request.status_request.parameterize.underscore.to_sym %>"
+                      style="text-decoration: <%= request.canceled? ? "line-through" : "none" %>;">
+                      <%= request.status_request %>
+                    </small>
+                  </td>
+                  <% unless current_user.pilot? %>
+                    <td><%= request.schedule.user_name %></td>
+                    <% if request.pending? %>
+                      <td>
+                        <div class="my-btn-actions">
+                          <%= link_to request_path(request, status_req: Settings.status.request.approve), method: :put,
+                            class: "btn btn-success my-hover", id: "btn-approve", data: {toggle:"tooltip", html:"true"}, title: t(".approve") do %>
+                            <i class="fas fa-check"></i>
+                          <% end %>
+                          <%= link_to request_path(request, status_req: Settings.status.request.rejected), method: :put,
+                            class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".decline") do %>
+                            <i class="fas fa-trash"></i>
+                          <% end %>
+                        </div>
+                      </td>
+                    <% else %>
+                      <td>
+                        <small class="badge badge-success" style="text-decoration: none;">
+                          <%= t ".executed" %>
+                        </small>
+                      </td>
                     <% end %>
-                    <%= link_to root_path, class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".decline") do %>
-                      <i class="fas fa-trash"></i>
+                  <% else %>
+                    <% if request.pending? %>
+                      <td class=<%= "action_request_#{request.id}" %>>
+                        <%= link_to request_path(request, status_req: Settings.status.request.canceled), method: :put, class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".cancel") do %>
+                          <i class="fas fa-reply-all"></i>
+                        <% end %>
+                      </td>
+                    <% else %>
+                      <td>
+                        <small class="badge badge-success" style="text-decoration: none;">
+                          <%= t ".executed" %>
+                        </small>
+                      </td>
                     <% end %>
-                  </div>
-                </td>
+                  <% end %>
+                </tr>
+              <% else %>
+                <% if request.pending? %>
+                  <tr id=<%= "row_request_#{request.id}" %>>
+                    <td><%= index + 1 %></td>
+                    <td><%= request.schedule_title %></td>
+                    <td><%= request.content %></td>
+                    <td class=<%= "status_request_#{request.id}"%>>
+                      <small class="badge badge-<%= modify_label_color request.status_request.parameterize.underscore.to_sym %>"
+                        style="text-decoration: <%= request.canceled? ? "line-through" : "none" %>;">
+                        <%= request.status_request %>
+                      </small>
+                    </td>
+                    <% unless current_user.pilot? %>
+                      <td><%= request.schedule.user_name %></td>
+                      <% if request.pending? %>
+                        <td>
+                          <div class="my-btn-actions">
+                            <%= link_to request_path(request, status_req: Settings.status.request.approve), method: :put,
+                              class: "btn btn-success my-hover", id: "btn-approve", data: {toggle:"tooltip", html:"true"}, title: t(".approve") do %>
+                              <i class="fas fa-check"></i>
+                            <% end %>
+                            <%= link_to request_path(request, status_req: Settings.status.request.rejected), method: :put,
+                              class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".decline") do %>
+                              <i class="fas fa-trash"></i>
+                            <% end %>
+                          </div>
+                        </td>
+                      <% else %>
+                        <td>
+                          <small class="badge badge-success" style="text-decoration: none;">
+                            <%= t ".executed" %>
+                          </small>
+                        </td>
+                      <% end %>
+                    <% else %>
+                      <% if request.pending? %>
+                        <td class=<%= "action_request_#{request.id}" %>>
+                          <%= link_to request_path(request, status_req: Settings.status.request.canceled), method: :put,
+                            class: "btn btn-danger my-hover", id: "btn-decline", data: {toggle:"tooltip", html:"true"}, title: t(".cancel") do %>
+                            <i class="fas fa-reply-all"></i>
+                          <% end %>
+                        </td>
+                      <% else %>
+                        <td>
+                          <small class="badge badge-success" style="text-decoration: none;">
+                            <%= t ".executed" %>
+                          </small>
+                        </td>
+                      <% end %>
+                    <% end %>
+                  </tr>
+                <% end %>
               <% end %>
-              </tr>
             <% end %>
           </tbody>
         </table>

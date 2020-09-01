@@ -1,4 +1,6 @@
 class RequestsController < ApplicationController
+  include RequestAction
+
   def new
     @schedule = current_user.schedules[0]
     @schedule_request = Request.new
@@ -6,9 +8,12 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new request_params
+
     if @request.save
+      send_notification_create
+
       flash[:success] = t ".create_request_success"
-      redirect_to new_request_path
+      redirect_to requests_path
     else
       flash[:danger] = t ".create_request_fail"
       render :new
@@ -16,17 +21,21 @@ class RequestsController < ApplicationController
   end
 
   def index
-    @requests = list_requests.page(params[:page]).per Settings.pagination.page
+    @requests = list_requests.lastest_time.page(params[:page]).per Settings.pagination.page
+  end
+
+  def update
+    if params[:status_req].present?
+      handle_request params[:status_req]
+    else
+      flash[:danger] = t ".cancel_failed"
+      redirect_to root_path
+    end
   end
 
   private
 
   def request_params
     params.require(:request).permit Request::REQUEST_PARAMS
-  end
-
-  def list_requests
-    Request.where schedule_id: Schedule.user_schedules(current_user.id) unless current_user.pilot?
-    Request.all
   end
 end

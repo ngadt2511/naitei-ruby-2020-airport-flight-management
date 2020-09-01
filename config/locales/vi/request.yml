@@ -3,10 +3,10 @@ vi:
     new:
       schedule_name: Tên lịch bay
       create_request: Tạo yêu cầu
-      schedule_id: ID Lịch bay 
-      reason: Lý do 
+      schedule_id: ID Lịch bay
+      reason: Nội dung 
       pilot_name: Tên phi công
-      title: Tiêu đề
+      title: Tên lịch bay
       from: Từ
       to: Đến
       plane_name: Tên máy bay
@@ -15,6 +15,11 @@ vi:
     create:
       create_request_success: Tạo request thành công.
       create_request_fail: Tạo request thất bại.
+      message_to_air_traffic: Đã tạo một yêu cầu mới
+      notification_title: Tiêu đề thông báo
+      notification_content: Nội dung thông báo
+      title: Tiêu đề message
+      content: Nội dung message
     alert: Lấy dữ liệu thất bại
     index:
       head: Xem yêu cầu
@@ -25,3 +30,8 @@ vi:
       actions: Hành động
       approve: Chấp thuận
       decline: Từ chối
+      executed: Đã xử lý
+    update:
+      message: Đã xử lý yêu cầu của bạn
+      success: Xử lý thành công
+      message_to_air_traffic: Đã tạo một yêu cầu mới

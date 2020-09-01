@@ -5,6 +5,7 @@ link:
     sidebar:
       avatar: https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg
       alt_avatar: Avatar Admin
+      size: 56
 user:
   name_length: 50
   email_length: 255
@@ -14,10 +15,12 @@ sessions:
   checkbox: "1"
   pattern: .{0}|.{6,20}
 pagination:
-  page: 10
+  page: 7
 notifications:
   readed: "1"
   no_read: "0"
+  request:
+    cancel_request: "3"
 type_account:
 schedules:
   format_date: "%Y - %B %e at %l:%M %p"
@@ -31,3 +34,18 @@ value:
   boolean: 1
   boolean_true: 1
   boolean_false: 0
+channel:
+  notifications: notifications_channel
+type_account:
+  pilot: 2
+  air_traffic: 1
+  admin: 0
+status:
+  notifications:
+    view: 1
+    unview: 0
+  request:
+    pending: 0
+    approve: 1
+    rejected: 2
+    canceled: 3
