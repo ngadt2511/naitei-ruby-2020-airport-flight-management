@@ -53,3 +53,6 @@ status:
     canceled: 3
 runway:
   status: "0"
+plane:
+  default_status: "0"
+  braned_array: ["vietname airline", "VietJet Air", "Jetstar Pacific Airlines", "Bamboo Airways"]
