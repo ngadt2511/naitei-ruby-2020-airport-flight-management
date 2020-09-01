@@ -11,6 +11,8 @@ user:
   email_length: 255
   password_min_length: 6
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  default_password: "123456"
+  default_staff_code: "11N2H1"
 sessions:
   checkbox: "1"
   pattern: .{0}|.{6,20}

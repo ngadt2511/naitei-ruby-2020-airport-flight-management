@@ -29,7 +29,14 @@ end
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
 
 group :development, :test do
+  gem "database_cleaner-active_record"
   gem "factory_bot_rails"
   gem "pry-rails"
   gem "rspec-rails"
+  gem "shoulda-matchers"
+  gem "simplecov", require: false
+end
+
+group :test do
+  gem "faker"
 end
