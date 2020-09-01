@@ -305,6 +305,16 @@
           null
         ]
       },
+      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/spec/factories/runways.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/spec/factories/users.rb": {
         "lines": [
           1,
@@ -344,6 +354,21 @@
           0,
           0,
           null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -353,7 +378,19 @@
           1,
           0,
           0,
+          0,
           null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
           null,
           null,
           1,
@@ -407,7 +444,7 @@
           null,
           null,
           1,
-          5,
+          6,
           null,
           null,
           1,
@@ -415,11 +452,68 @@
           null,
           null,
           1,
-          5,
+          6,
           null,
           null,
           1,
-          5,
+          6,
+          null,
+          null
+        ]
+      },
+      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/app/models/runway.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          6,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -483,13 +577,6 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/app/models/schedule.rb": {
         "lines": [
           1,
@@ -546,6 +633,6 @@
         ]
       }
     },
-    "timestamp": 1598941510
+    "timestamp": 1598944677
   }
 }
