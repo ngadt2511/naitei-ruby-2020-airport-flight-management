@@ -40,3 +40,7 @@ end
 group :test do
   gem "faker"
 end
+
+group :test do
+  gem "capybara"
+end

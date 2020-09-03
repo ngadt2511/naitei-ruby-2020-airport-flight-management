@@ -1,7 +1,149 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/environment.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/spec/models/schedule_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          5,
+          1,
+          4,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/spec/rails_helper.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +152,7 @@
           1
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/application.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/application.rb": {
         "lines": [
           1,
           null,
@@ -29,7 +171,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/boot.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -37,7 +179,7 @@
           1
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/config.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/config.rb": {
         "lines": [
           1,
           null,
@@ -203,7 +345,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/application_controller_renderer.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -215,7 +357,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/assets.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -233,7 +375,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/backtrace_silencers.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -244,7 +386,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/content_security_policy.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -278,7 +420,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/cookies_serializer.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -287,7 +429,7 @@
           1
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/filter_parameter_logging.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -295,7 +437,7 @@
           1
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/inflections.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -315,7 +457,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/kaminari_config.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/kaminari_config.rb": {
         "lines": [
           null,
           null,
@@ -333,7 +475,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/mime_types.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -341,7 +483,7 @@
           null
         ]
       },
-      "/home/huy-hoang/naitei-ruby-2020-airport-flight-management/config/initializers/wrap_parameters.rb": {
+      "/Users/ngadothuy/Documents/Ruby/naitei-ruby-2020-airport-flight-management/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
