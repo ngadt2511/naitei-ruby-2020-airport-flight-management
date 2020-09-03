@@ -68,11 +68,15 @@ RSpec.describe Schedule, type: :model do
     it "return user schedules" do
       expect(Schedule.user_schedules(0)).to be_empty
     end
+
+    it "return all schedules now" do
+      expect(Schedule.all_schedules_now("2020-08-30 10:41:00".to_datetime)).to_not include(subject)
+    end
   end
 
   describe "public method" do
     let(:subjects) {Array.new}
-    before(:each) do 
+    before(:each) do
       subjects << subject
     end
     context ".check_runwayid_form?" do

@@ -21,7 +21,11 @@ class RequestsController < ApplicationController
   end
 
   def index
-    @requests = list_requests.lastest_time.page(params[:page]).per Settings.pagination.page
+    @requests = if current_user.admin?
+                  Request.all.page(params[:page]).per Settings.pagination.page
+                else
+                  list_requests.lastest_time.page(params[:page]).per Settings.pagination.page
+                end
   end
 
   def update
