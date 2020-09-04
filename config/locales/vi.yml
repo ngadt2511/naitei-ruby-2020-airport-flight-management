@@ -1,0 +1,12 @@
+vi:
+  devise:
+    sessions:
+      new:
+        fogot_password: Quên mật khẩu?
+        log_in: Đăng nhập
+        remember_me_content: Ghi nhớ tôi
+        username: Tên đăng nhập
+        password: Mật khẩu
+        title_error_pass: Mật khẩu phải từ 6 đến 20 ký tự
+      create:
+        invalid: Email/Mật khẩu không hợp lệ.

@@ -9,12 +9,6 @@ RSpec.describe User, type: :model do
         expect(user.valid?).to eq true
       end
     end
-
-    context "when missing required fields" do
-      it "should be false" do
-        expect(user_fail.valid?).to eq false
-      end
-    end
   end
 
   describe "Enums" do
@@ -28,12 +22,6 @@ RSpec.describe User, type: :model do
   describe "Associations" do
     it "should has many schedules" do
       is_expected.to have_many(:schedules).dependent(:nullify)
-    end
-  end
-
-  describe ".new_token" do
-    it "new token should be successfully generated" do
-      expect(User.new_token.size > 0).to eq(true)
     end
   end
 end
