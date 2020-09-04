@@ -5,6 +5,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views", "~> 1.0.1"
 gem "config"
+gem "devise", "~> 4.1"
 gem "i18n-js"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"

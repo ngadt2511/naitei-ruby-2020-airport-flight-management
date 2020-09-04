@@ -1,6 +1,6 @@
 jQuery(function ($) {
-  if (window.location.pathname === '/vi/login' ||  window.location.pathname === '/login'
-    || window.location.pathname === '/ja/login') {
+  if (window.location.pathname === '/vi/users/sign_in' ||  window.location.pathname === '/users/sign_in'
+    || window.location.pathname === '/ja/users/sign_in') {
     $('.page-wrapper').addClass('header-befor-login')
   }
 

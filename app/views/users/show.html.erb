@@ -22,7 +22,7 @@
                   <h5><%= t ".unit" %></h5>
                 </div>
                   <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                    <%= link_to logout_path(locale), {class: "btn btn-danger btn-block my-hover", data: { method: "delete" }} do %>
+                    <%= link_to destroy_user_session_path(locale), {class: "btn btn-danger btn-block my-hover", data: { method: "delete" }} do %>
                       <i class="fa fa-power-off"></i>
                       <%= t ".logout" %>
                     <% end %>
