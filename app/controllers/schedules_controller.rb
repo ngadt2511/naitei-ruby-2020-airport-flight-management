@@ -6,6 +6,7 @@ class SchedulesController < ApplicationController
 
   def show
     request_schedule = Schedule.find_by id: params[:id]
+    authorize! :read, request_schedule
     render json: {request_schedule: request_schedule}
   end
 

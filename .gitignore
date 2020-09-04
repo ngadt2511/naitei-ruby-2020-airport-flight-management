@@ -40,4 +40,4 @@ rspec.text
 
 .ruby-version
 
-coverage
+/coverage/*

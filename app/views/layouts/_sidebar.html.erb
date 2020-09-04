@@ -41,9 +41,9 @@
               <%= t ".actions" %>
             </span>
           </li>
-          <% if current_user.admin? || current_user.air_traffic_officer? %>
+          <% if can? :update, Schedule %>
             <li>
-              <%= link_to root_path locale do %>
+              <%= link_to schedules_path locale do %>
                 <i class="fa fa-plane"></i>
                 <span>
                   <%= t ".management_plane" %>
@@ -51,24 +51,7 @@
               <% end %>
             </li>
           <% end %>
-            <li>
-              <%= link_to schedules_path locale do %>
-                <i class="fa fa-calendar"></i>
-                <span>
-                  <%= t ".schedules" %>
-                </span>
-              <% end %>
-            </li>
-            <% if current_user.pilot? %>
-              <li>
-                <%= link_to new_request_path locale do %>
-                  <i class="fa fa-plus"></i>
-                  <span>
-                    <%= t ".create_request" %>
-                  </span>
-                <% end %>
-              </li>
-            <% end %>
+          <% if can? :read, Request %>
             <li>
               <%= link_to requests_path locale do %>
                 <i class="fa fa-eye"></i>
@@ -77,6 +60,27 @@
                 </span>
               <% end %>
             </li>
+          <% end %>
+          <% if can? :create, Request %>
+            <li>
+              <%= link_to new_request_path locale do %>
+                <i class="fa fa-plus"></i>
+                <span>
+                  <%= t ".create_request" %>
+                </span>
+              <% end %>
+            </li>
+          <% end %>
+          <% if can? :read, Schedule %>
+            <li>
+              <%= link_to schedules_path locale do %>
+                <i class="fa fa-calendar"></i>
+                <span>
+                  <%= t ".schedules" %>
+                </span>
+              <% end %>
+            </li>
+          <% end %>
         </ul>
       </div>
       <!-- sidebar-menu  -->

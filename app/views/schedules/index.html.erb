@@ -22,7 +22,7 @@
           <td><%= schedule.to %></td>
           <td><%= schedule.runway_name %></td>
           <td>
-            <% if current_user.air_traffic_officer? || current_user.admin? %>
+            <% if can? :update, Schedule %>
              <%= link_to edit_schedule_path(id: schedule.id) do %>
                 <div class="btn btn-warning my-hover">
                   <i class="fas fa-edit"></i>
