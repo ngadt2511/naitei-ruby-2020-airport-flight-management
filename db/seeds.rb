@@ -69,7 +69,7 @@ end
                )
 end
 # create schedule
-def rand_time(from, to=Time.now)
+def rand_time(from, to=Time.now + 6.days)
   Time.at(from + rand * (to.to_f - from.to_f))
 end
 
@@ -81,7 +81,7 @@ end
   to = "#{n%2 +2}"
   runway_id = n%2 +1
   plane_id = (n*131 + n*11) % 10 +1
-  user_id = (n*249 + n*17 +n *3)%10 +2
+  user_id = (n*249 + n*17 +n *3)%5 +4
   Schedule.create!(time: time,
                   status: status,
                   title: title,

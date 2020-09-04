@@ -14,6 +14,7 @@ class Schedule < ApplicationRecord
 
   scope :user_schedules, ->(ids){select(:id).where("schedules.user_id = ?", ids)}
   scope :time_schedules, ->(time){where(time: time)}
+  scope :all_schedules_now, ->(time){where("schedules.time >= ?", time.to_datetime)}
 
   class << self
     def checkrunway? params
