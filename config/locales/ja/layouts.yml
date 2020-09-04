@@ -12,6 +12,8 @@ ja:
       schedules: スケジュール
       create_request: リクエストを作成する
       view_request: リクエストを見る
+      pilot: パイロット マネージャー
+      air_traffic_officer: 航空管制官 マネージャー
     header:
       name: フライト管理
       login: 登録
