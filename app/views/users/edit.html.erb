@@ -1,0 +1,32 @@
+<% provide :title, t(".title") %>
+<div class="edit_form">
+  <div class="table-responsive">
+    <div class="table-dark">
+      <div class="row">
+        <h3><%= t(".name_form") %></h3>
+      </div>
+      <div class="row form">
+        <%= form_for @user do |f| %>
+          <div class="row">
+            <%= f.label :name, t(".name") %>
+            <%= f.text_field :name, class: "form-control", placeholder: t(".name"), autofocus: true %>
+          </div>
+          <div class="row">
+            <%= f.label :email, t(".email") %>
+            <%= f.email_field :email, class: "form-control",placeholder: t(".email") %>
+          </div>
+          <div class="row">
+            <%= f.label :staff_code, t(".staff_code") %>
+            <%= f.text_field :staff_code, class: "form-control",placeholder: t(".staff_code") %>
+          </div>
+          <div class="row btn-submit">
+            <%= f.button t(".button_text"), {class: "btn btn-warning my-hover", id: "btn-login"} do %>
+              <i class="fas fa-edit"></i>
+              <%= t ".button_text" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

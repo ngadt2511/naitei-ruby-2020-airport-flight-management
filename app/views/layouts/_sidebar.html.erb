@@ -81,6 +81,16 @@
               <% end %>
             </li>
           <% end %>
+          <% if current_user.admin? %>
+            <li>
+              <%= link_to pilots_path locale do %>
+                <i class="fa fa-calendar"></i>
+                <span>
+                  <%= t ".pilot" %>
+                </span>
+              <% end %>
+            </li>
+          <% end %>
         </ul>
       </div>
       <!-- sidebar-menu  -->

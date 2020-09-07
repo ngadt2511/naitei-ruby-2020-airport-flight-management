@@ -1,4 +1,16 @@
-vi:
+ja:
   users:
     show:
-      title: Thông tin cá nhân
+       title: 個人情報
+    edit:
+      title: パイロット情報を編集する
+      name: 名前
+      email: メール
+      staff_code: スタッフコード
+      button_text: 編集する
+      name_form: パイロット情報を編集する
+    update:
+      updated: 正常に更新されました
+      update_fail: 更新に失敗しました
+    destroy:
+      deleted: 正常に削除されました

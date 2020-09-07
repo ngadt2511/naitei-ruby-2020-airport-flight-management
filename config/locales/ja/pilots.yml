@@ -1,0 +1,9 @@
+ja:
+  pilots:
+    index:
+      title: パイロット マネージャー
+      name: 名前
+      email: メール
+      staff_code: スタッフコード
+      action: アクション
+      sure: 本気ですか？

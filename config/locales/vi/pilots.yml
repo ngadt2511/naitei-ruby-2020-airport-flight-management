@@ -1,0 +1,9 @@
+vi:
+  pilots:
+    index:
+      title: QL phi công
+      name: Họ và Tên
+      email: Email
+      staff_code: Mã nhân viên
+      action: Thao tác
+      sure: Chắc chắn muốn xóa?

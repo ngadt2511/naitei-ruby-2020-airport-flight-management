@@ -5,6 +5,7 @@ class Ability
     user ||= User.new
     if user.admin?
       can :read, [Request, Schedule]
+      can :update, Schedule
     elsif user.pilot?
       can :manage, Notification
       can [:create, :read], Request

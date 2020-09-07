@@ -2,3 +2,15 @@ vi:
   users:
     show:
       title: Thông tin cá nhân
+    edit:
+      title: Sửa thông tin
+      name: Họ và Tên
+      email: Email
+      staff_code: Mã nhân viên
+      button_text: Sửa
+      name_form: Sửa thông tin Phi Công
+    update:
+      updated: Đã cập nhật thành công
+      update_fail: Cập nhật thất bại
+    destroy:
+      deleted: Đã xóa thành công
