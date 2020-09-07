@@ -11,5 +11,8 @@ module NaiteiRuby2020AirportFlightManagement
     config.i18n.available_locales = [:ja, :vi]
     config.i18n.default_locale = :vi
     config.time_zone = "Asia/Ho_Chi_Minh"
+
+    config.paths.add File.join("app", "api"), glob: File.join("**", "*.rb")
+    config.autoload_paths += Dir[Rails.root.join("app", "api", "*")]
   end
 end
