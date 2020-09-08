@@ -95,3 +95,20 @@
 
   }
 }
+
+#plane-name-search, #runway-search, #time-search, #from-search, #to-search, #btn-search {
+  padding: 10px;
+}
+
+.input-group-append.btn-schedule-search {
+  padding: 10px;
+}
+
+#q_plane_name_eq, #q_runway_name_eq, #q_time_eq, #q_to_lteq, #q_from_gteq {
+  width: 100%;
+}
+
+#btn-search {
+  display: flex;
+  justify-content: flex-end;
+}

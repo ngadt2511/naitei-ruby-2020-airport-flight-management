@@ -45,3 +45,13 @@
     padding: 0 20px;
   }
 }
+
+#request_search {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+#btn-search,  #content-search, #status {
+  padding: 20px;
+}

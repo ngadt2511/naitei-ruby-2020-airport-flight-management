@@ -1,6 +1,21 @@
 <div id="request-screen">
   <div id="accordion">
     <div class="card">
+      <div class="search" id="search">
+        <%= search_form_for @q, class: "form-inline" do |f| %>
+          <div class="form-group" id="content-search">
+            <%= f.text_field :content_cont, class: "form-control", placeholder: t(".content")%><br>
+          </div>
+          <div class="form-group" id="status">
+            <%= f.select :status_request_eq, options_for_select(Request.status_requests, Request.status_requests[f.object.status_request])%>
+          </div>
+          <div class="input-group-append" id="btn-search">
+            <%= f.button :submit, class: "btn btn-primary" do %>
+              <% t ".search" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
       <div class="card-body" id="form-request">
         <h2 class="card-title-custom text-center w-100">
           <%= t ".head" %>

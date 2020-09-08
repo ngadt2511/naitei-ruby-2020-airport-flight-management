@@ -41,10 +41,16 @@ class SchedulesController < ApplicationController
   end
 
   def list_schedules
-    @schedules = if current_user.admin?
-                   Schedule.all_schedules_now(Time.zone.now).page(params[:page]).per Settings.pagination.page
-                 else
-                   current_user.schedules.page(params[:page]).per Settings.pagination.page
-                 end
+    if current_user.admin?
+      @q = Schedule.ransack params[:q]
+      @schedules = @q.result.all_of_schedules
+    else
+      @q = current_user.schedules.ransack params[:q]
+      @schedules = @q.result.page(params[:page]).per Settings.pagination.page
+    end
+  end
+
+  def all_of_schedules
+    all_schedules_now(Time.zone.now).page(params[:page]).per Settings.pagination.page
   end
 end

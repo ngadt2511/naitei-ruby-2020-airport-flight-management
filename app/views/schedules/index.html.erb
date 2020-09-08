@@ -1,5 +1,38 @@
 <%= provide :title, t(".title") %>
 <div class="table-responsive">
+  <div class="search" id="schedule-search">
+    <%= search_form_for @q, class: "form-inline" do |f| %>
+      <div class="col-md-6" id="plane-name-search">
+        <%= f.text_field :plane_name_eq, class: "form-control", placeholder: t(".plane_name")%><br>
+      </div>
+      <div class="col-md-6" id="runway-search">
+        <%= f.text_field :runway_name_eq, class: "form-control", placeholder: t(".run_way")%><br>
+      </div>
+      <div class="col-md-6" id="time-search">
+        <%= f.date_field :time_eq, class: "form-control", placeholder: t(".time")%><br>
+      </div>
+      <div class="col-md-3" id="from-search">
+        <%= f.text_field :from_gteq, class: "form-control", placeholder: t(".from")%><br>
+      </div>
+      <div class="col-md-3" id="to-search">
+        <%= f.text_field :to_lteq, class: "form-control", placeholder: t(".to")%><br>
+      </div>
+      <div class="col-md-9">
+      </div>
+      <div class="col-md-3" id="btn-search">
+        <div class="input-group-append btn-schedule-search" style="padding: 10px">
+          <%= f.button :submit, class: "btn btn-primary " do %>
+            <% t ".search" %>
+          <% end %>
+        </div>
+        <div class="input-group-append" style="padding: 10px">
+          <a class= "btn btn-danger" id="delete-schedule">
+            <%= t ".delete" %>
+          </a>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <table class="table table-dark">
     <thead>
       <tr>

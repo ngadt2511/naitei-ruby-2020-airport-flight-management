@@ -1,6 +1,4 @@
 class Request < ApplicationRecord
-  attr_reader :content, :status_request, :schedule_id
-
   REQUEST_PARAMS = %i(schedule_id content).freeze
 
   enum status_request: {pending: 0, approve: 1, rejected: 2, canceled: 3}

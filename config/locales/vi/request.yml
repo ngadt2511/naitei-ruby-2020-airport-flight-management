@@ -31,6 +31,9 @@ vi:
       approve: Chấp thuận
       decline: Từ chối
       executed: Đã xử lý
+      search: Tìm kiếm
+      content: Lý do
+      pending: Chờ xử lý
     update:
       message: Đã xử lý yêu cầu của bạn
       success: Xử lý thành công

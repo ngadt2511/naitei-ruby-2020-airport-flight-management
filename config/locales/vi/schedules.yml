@@ -8,6 +8,8 @@ vi:
       time: Thời gian bay
       run_way: Đường băng
       btn_edit: Sửa
+      search: Tìm kiếm
+      delete: Xoá
     edit:
       edit: Sửa lịch bay
       time: Thời gian

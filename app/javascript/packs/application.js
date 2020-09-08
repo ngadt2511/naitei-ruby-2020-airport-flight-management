@@ -8,3 +8,4 @@ global.I18n = require('i18n-js')
 import 'bootstrap'
 require('./static_pages/sidebar')
 require('./notifications/notifications')
+require('./schedules/schedules')

@@ -8,6 +8,8 @@ ja:
       time: 飛行時間
       run_way: 滑走路
       btn_edit: 編集
+      search: 検索
+      delete: 削除
     edit:
       edit: フライトスケジュールを編集
       time: 飛行時間
