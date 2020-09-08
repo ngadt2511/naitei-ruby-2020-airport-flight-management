@@ -21,10 +21,11 @@ class RequestsController < ApplicationController
   end
 
   def index
+    @q = Request.ransack params[:q]
     @requests = if current_user.admin?
-                  Request.all.page(params[:page]).per Settings.pagination.page
+                  @q.result.all.page(params[:page]).per Settings.pagination.page
                 else
-                  list_requests.lastest_time.page(params[:page]).per Settings.pagination.page
+                  list_requests_by_time
                 end
   end
 
@@ -41,5 +42,9 @@ class RequestsController < ApplicationController
 
   def request_params
     params.require(:request).permit Request::REQUEST_PARAMS
+  end
+
+  def list_requests_by_time
+    list_requests.lastest_time.page(params[:page]).per Settings.pagination.page
   end
 end

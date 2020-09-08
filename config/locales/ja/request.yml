@@ -12,6 +12,7 @@ ja:
       plane_name: 飛行機の名前
       runway: 滑走路
       submit: 申し出る
+      title: タイトル
     create:
       create_request_success: リクエストを作成することが成功しました。
       create_request_fail: リクエストを作成することが失敗しました。
@@ -26,3 +27,11 @@ ja:
       approve: 承認
       decline: 低下
       status: 状況
+      search: 検索
+      content: 理由
+      pending: 保留中
+      executed: 実行された
+    title_requests:
+      late: 遅刻
+      early: 早い
+      absence: 欠席

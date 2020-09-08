@@ -22,7 +22,7 @@
       transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
       cursor: not-allowed;
     }
-    #request_schedule_id {
+    #request_schedule_id, #request_title_request {
       width: 100%;
       height: auto;
       font-size: 16px;
@@ -44,4 +44,14 @@
   .request-table {
     padding: 0 20px;
   }
+}
+
+#request_search {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+#btn-search,  #content-search, #status {
+  padding: 20px;
 }

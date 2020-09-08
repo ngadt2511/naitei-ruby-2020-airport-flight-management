@@ -12,6 +12,7 @@ vi:
       plane_name: Tên máy bay
       runway: Đường băng
       submit: Gửi
+      title: Tiêu đề
     create:
       create_request_success: Tạo request thành công.
       create_request_fail: Tạo request thất bại.
@@ -31,7 +32,14 @@ vi:
       approve: Chấp thuận
       decline: Từ chối
       executed: Đã xử lý
+      search: Tìm kiếm
+      content: Lý do
+      pending: Chờ xử lý
     update:
       message: Đã xử lý yêu cầu của bạn
       success: Xử lý thành công
       message_to_air_traffic: Đã tạo một yêu cầu mới
+    title_requests:
+      late: Đi muộn 
+      early: Về sớm
+      absence: Nghỉ 

@@ -33,6 +33,12 @@
               <span class="field-required"><%= t ".to" %></span>
               <p class="content" id="to"><%= @schedule.to %></p>
             </div>
+            <div class="form-group col-md-6">
+              <div>
+                <span class="field-required"><%= t ".title" %></span>
+              </div>
+              <%= f.select :title_request, Request.title_requests_i18n %>
+            </div>
             <div class="form-group col-md-12">
               <span class="field-required"><%= f.label :reason, t(".reason") %></span>
               <%= f.text_area :content, rows: Settings.requests.text_row, class: "col-md-12" %>

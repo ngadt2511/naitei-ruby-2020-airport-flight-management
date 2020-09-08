@@ -6,6 +6,21 @@
           <%= t ".head" %>
         </h2>
       </div>
+      <div class="search" id="search">
+        <%= search_form_for @q, class: "form-inline" do |f| %>
+          <div class="form-group" id="content-search">
+            <%= f.text_field :content_cont, class: "form-control", placeholder: t(".content")%><br>
+          </div>
+          <div class="form-group" id="status">
+            <%= f.select :status_request_eq, options_for_select(Request.status_requests, Request.status_requests[f.object.status_request])%>
+          </div>
+          <div class="input-group-append" id="btn-search">
+            <%= f.button :submit, class: "btn btn-primary" do %>
+              <% t ".search" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
       <div class="request-table">
         <table class="table table-striped table-hover table-bordered">
           <thead>

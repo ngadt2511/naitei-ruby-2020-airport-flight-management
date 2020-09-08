@@ -1,9 +1,8 @@
 class Request < ApplicationRecord
-  attr_reader :content, :status_request, :schedule_id
-
-  REQUEST_PARAMS = %i(schedule_id content).freeze
+  REQUEST_PARAMS = %i(schedule_id title_request content).freeze
 
   enum status_request: {pending: 0, approve: 1, rejected: 2, canceled: 3}
+  enum title_request: {late: 0, early: 1, absence: 2}
 
   belongs_to :schedule
 
@@ -14,6 +13,14 @@ class Request < ApplicationRecord
   scope :find_request_pending, ->{where status_request: Settings.status.request.pending}
   scope :find_request_by_user, ->(user_ids){where schedule_id: Schedule.user_schedules(user_ids)}
   scope :lastest_time, ->{order created_at: :desc}
+
+  class << self
+    def title_requests_i18n
+      title_requests.each_with_object({}) do |(k, _), obj|
+        obj[I18n.t("requests.title_requests.#{k}")] = k
+      end
+    end
+  end
 
   private
 

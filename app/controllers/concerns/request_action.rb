@@ -1,8 +1,11 @@
 module RequestAction
   def list_requests
-    return Request.find_request_by_user(current_user.id) if current_user.pilot?
-
-    Request.find_request_pending unless current_user.pilot?
+    @q = Request.ransack params[:q]
+    if current_user.pilot?
+      @q.result.find_request_by_user(current_user.id)
+    else
+      @q.result.find_request_pending
+    end
   end
 
   def handle_request status_req

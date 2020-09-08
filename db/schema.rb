@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_023128) do
+ActiveRecord::Schema.define(version: 2020_09_08_080543) do
 
   create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.string "title"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_023128) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "status_request", default: 0
     t.integer "owner"
+    t.string "title_request"
     t.index ["schedule_id"], name: "index_requests_on_schedule_id"
   end
 
